@@ -5,9 +5,9 @@
 
 ### Welcome to Immich! 
 
-In this repository, you can find a self-hosted solution to backup, view, manage, and share your photos from your phone or your existing galleries.
+This repository contains a high-performance self-hosted solution for backing up, viewing, managing, and sharing photos from your phone or existing galleries.
 
-Take a look around, and if you need help you can find us on Discord.
+Take a look around, and if you need help, you can find us on Discord.
 
 <p align="center"> 
   <br/>  
@@ -22,5 +22,5 @@ Take a look around, and if you need help you can find us on Discord.
 - - - -
 
 ```
-Privacy should not be a luxury
+Privacy should not be a luxury.
 ```
