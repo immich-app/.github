@@ -1,0 +1,71 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":configMigration",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    "group:nodeJs"
+  ],
+  "recreateWhen": "never",
+  "minimumReleaseAge": "5 days",
+  "labels": ["dependencies", "renovate", "changelog:skip"]
+  "packageRules": [
+    {
+      "groupName": "@immich/ui",
+      "matchPackageNames": ["@immich/ui"]
+    },
+    {
+      "groupName": "flutter",
+      "matchPackageNames": [
+        "/flutter/"
+      ]
+    },
+    {
+      "groupName": "exiftool",
+      "matchPackageNames": [
+        "exiftool{/,}**"
+      ]
+    },
+    {
+      "groupName": "svelte",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchPackageNames": [
+        "@sveltejs{/,}**"
+      ]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+    },
+    {
+      "groupName": "base-image",
+      "minimumReleaseAge": "0",
+      "matchPackageNames": [
+        "ghcr.io/immich-app/base-server{/,}**"
+      ]
+    },
+    {
+      "matchPackageNames": [
+        "com.google.guava:guava"
+      ],
+      "versioning": "docker"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Process custom dependencies",
+      "fileMatch": [
+        "\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?\"(?<currentValue>.*)\"\n"
+      ],
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
+}
