@@ -9,7 +9,7 @@
   ],
   "recreateWhen": "never",
   "minimumReleaseAge": "5 days",
-  "labels": ["dependencies", "renovate", "changelog:skip"]
+  "labels": ["dependencies", "renovate", "changelog:skip"],
   "packageRules": [
     {
       "groupName": "@immich/ui",
@@ -38,7 +38,7 @@
     },
     {
       "matchManagers": ["github-actions"],
-      "groupName": "github-actions",
+      "groupName": "github-actions"
     },
     {
       "groupName": "base-image",
