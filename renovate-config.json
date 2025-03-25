@@ -4,11 +4,11 @@
     "config:recommended",
     ":configMigration",
     "docker:pinDigests",
-    "helpers:pinGitHubActionDigests",
-    "group:nodeJs"
+    "helpers:pinGitHubActionDigests"
   ],
   "recreateWhen": "never",
   "minimumReleaseAge": "5 days",
+  "schedule": "before 9am on tuesday",
   "labels": ["dependencies", "renovate", "changelog:skip"],
   "packageRules": [
     {
@@ -52,6 +52,47 @@
         "com.google.guava:guava"
       ],
       "versioning": "docker"
+    },
+    {
+      "matchDatasources": [
+        "npm"
+      ],
+      "rangeStrategy": "bump",
+      "groupName": "node",
+      "versioning": "node",
+      "matchPackageNames": [
+        "node",
+        "@types/node"
+      ]
+    },
+    {
+      "groupName": "node",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "node"
+      ],
+      "versionCompatibility": "^(?<version>[^-]+)(?<compatibility>-.*)?$",
+      "versioning": "node"
+    },
+    {
+      "groupName": "typescript-projects",
+      "matchDatasources": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "schedule": "on tuesday",
+      "matchPackageNames": [
+        "!exiftool{/,}**",
+        "!reflect-metadata{/,}**",
+        "!node",
+        "!@types/node",
+        "!@mapbox/mapbox-gl-rtl-text"
+      ]
     }
   ],
   "customManagers": [
