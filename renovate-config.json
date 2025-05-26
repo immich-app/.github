@@ -93,6 +93,11 @@
         "!@types/node",
         "!@mapbox/mapbox-gl-rtl-text"
       ]
+    },
+    {
+      "matchPackageNames": ["immich-app/devtools"],
+      "matchDepTypes": ["action"],
+      "versioning": "semver-coerced"
     }
   ],
   "customManagers": [
