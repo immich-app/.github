@@ -97,7 +97,8 @@
     {
       "matchPackageNames": ["immich-app/devtools"],
       "matchDepTypes": ["action"],
-      "versioning": "semver-coerced"
+      "versioning": "semver-coerced",
+      "minimumReleaseAge": "0"
     }
   ],
   "customManagers": [
