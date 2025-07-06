@@ -119,12 +119,13 @@
       "customType": "regex",
       "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       "matchStrings": [
-        "uses:\\s+immich-app/devtools/(?:.*/)?(?<depType>\\w+)s/(?<depName>[^/@]+?)(?:\\.ya?ml)?@(?<currentDigest>[a-f0-9]+)\\s+#\\s+(?<currentValue>[^\\s]+)"
+        "uses:\\s+(?<fullPath>immich-app/devtools/(?:.*/)?(?<depType>\\w+)s/(?<depName>[^/@]+?)(?:\\.ya?ml)?)@(?<currentDigest>[a-f0-9]+)\\s+#\\s+(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "github-tags",
       "packageNameTemplate": "immich-app/devtools",
       "extractVersionTemplate": "^{{{depName}}}-{{{depType}}}-(?<version>.+)$",
-      "versioningTemplate": "semver-coerced"
+      "versioningTemplate": "semver-coerced",
+      "autoReplaceStringTemplate": "uses: {{{fullPath}}}@{{{newDigest}}} # {{{depName}}}-{{{depType}}}-{{{newValue}}}"
     }
   ]
 }
