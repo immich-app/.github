@@ -28,6 +28,12 @@
       ]
     },
     {
+      "groupName": "sharp",
+      "matchPackageNames": [
+        "sharp"
+      ]
+    },
+    {
       "groupName": "svelte",
       "matchUpdateTypes": [
         "major"
@@ -91,7 +97,8 @@
         "!reflect-metadata{/,}**",
         "!node",
         "!@types/node",
-        "!@mapbox/mapbox-gl-rtl-text"
+        "!@mapbox/mapbox-gl-rtl-text",
+        "!sharp"
       ]
     },
     {
