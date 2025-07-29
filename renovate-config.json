@@ -91,7 +91,6 @@
         "minor",
         "patch"
       ],
-      "schedule": "on tuesday",
       "matchPackageNames": [
         "!exiftool{/,}**",
         "!reflect-metadata{/,}**",
