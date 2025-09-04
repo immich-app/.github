@@ -10,6 +10,7 @@
   "minimumReleaseAge": "5 days",
   "schedule": "before 9am on tuesday",
   "labels": ["dependencies", "renovate", "changelog:skip"],
+  "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
       "groupName": "@immich/ui",
