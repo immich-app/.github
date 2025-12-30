@@ -4,7 +4,8 @@
     "config:recommended",
     ":configMigration",
     "docker:pinDigests",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "abandonments:recommended"
   ],
   "recreateWhen": "never",
   "minimumReleaseAge": "5 days",
