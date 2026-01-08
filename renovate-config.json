@@ -51,6 +51,7 @@
     {
       "groupName": "base-image",
       "minimumReleaseAge": "0",
+      "versioning": "loose",
       "matchPackageNames": [
         "ghcr.io/immich-app/base-server{/,}**"
       ]
