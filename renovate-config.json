@@ -97,6 +97,7 @@
       "matchPackageNames": [
         "!exiftool{/,}**",
         "!reflect-metadata{/,}**",
+        "!@immich/ui",
         "!node",
         "!@types/node",
         "!@mapbox/mapbox-gl-rtl-text",
