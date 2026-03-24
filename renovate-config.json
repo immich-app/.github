@@ -110,7 +110,8 @@
       "groupName": "github-actions",
       "ignoreUnstable": false,
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
-      "minimumReleaseAge": "0"
+      "minimumReleaseAge": "0",                                                                                                                      
+      "extractVersion": "^(?<version>.+)$" 
     }
   ],
   "customManagers": [
