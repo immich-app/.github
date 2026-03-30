@@ -105,6 +105,10 @@
       ]
     },
     {
+      "matchPackageNames": ["/^immich-app\\/devtools\\/.github\\/workflows\\/shared-/"],
+      "enabled": false
+    },
+    {
       "matchPackageNames": ["immich-app/devtools"],
       "matchDepTypes": ["action"],
       "groupName": "github-actions",
