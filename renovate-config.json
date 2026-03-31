@@ -105,7 +105,8 @@
       ]
     },
     {
-      "matchPackageNames": ["/^immich-app\\/devtools\\/.github\\/workflows\\/shared-/"],
+      "matchPackageNames": ["immich-app/devtools"],
+      "matchFileNames": [".github/workflows/org-**"],
       "enabled": false
     },
     {
