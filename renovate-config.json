@@ -106,7 +106,7 @@
     },
     {
       "matchPackageNames": ["immich-app/devtools"],
-      "matchFileNames": [".github/workflows/org-**"],
+      "matchFileNames": ["**/.github/workflows/org-**"],
       "enabled": false
     },
     {
@@ -115,8 +115,8 @@
       "groupName": "github-actions",
       "ignoreUnstable": false,
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
-      "minimumReleaseAge": "0",                                                                                                                      
-      "extractVersion": "^(?<version>.+)$" 
+      "minimumReleaseAge": "0",
+      "extractVersion": "^(?<version>.+)$"
     }
   ],
   "customManagers": [
