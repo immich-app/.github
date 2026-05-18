@@ -12,6 +12,10 @@
   "schedule": "before 9am on tuesday",
   "labels": ["dependencies", "renovate", "changelog:skip"],
   "postUpdateOptions": ["pnpmDedupe"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 9am on the first wednesday of the month"]
+  },
   "packageRules": [
     {
       "groupName": "@immich/ui",
