@@ -16,7 +16,8 @@
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 9am on the 1st day of the month"],
-    "commitMessageExtra": "({{manager}})"
+    "commitMessageExtra": "({{manager}})",
+    "additionalBranchPrefix": "{{manager}}-"
   },
   "packageRules": [
     {
