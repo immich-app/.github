@@ -7,6 +7,9 @@
     "helpers:pinGitHubActionDigestsToSemver",
     "abandonments:recommended"
   ],
+  "env": {
+    "MISE_TRUSTED_CONFIG_PATHS": "/tmp/renovate/repos"
+  },
   "recreateWhen": "never",
   "minimumReleaseAge": "5 days",
   "schedule": "before 9am on tuesday",
