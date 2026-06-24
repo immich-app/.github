@@ -9,6 +9,7 @@
   ],
   "recreateWhen": "never",
   "minimumReleaseAge": "5 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "schedule": "before 9am on tuesday",
   "prConcurrentLimit": 0,
   "labels": ["dependencies", "renovate", "changelog:skip"],
