@@ -136,7 +136,7 @@
       "description": "Process custom dependencies",
       "managerFilePatterns": ["/.*/"],
       "matchStrings": [
-        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>\\S+))?\\s*\\n.*?[:=]\\s*\"?(?<currentValue>[^\"\\s]+)\"?"
+        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>\\S+))?\\s*\\n(?:.*?[:=]|\\s*-)\\s*\"?(?<currentValue>[^\"\\s]+)\"?"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
