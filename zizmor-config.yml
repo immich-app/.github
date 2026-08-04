@@ -1,0 +1,10 @@
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        "immich-app/devtools/.github/workflows/shared-zizmor.yml": ref-pin
+        "immich-app/devtools/.github/workflows/shared-pr-require-conventional-commit.yml": ref-pin
+        "*": hash-pin
+  secrets-inherit:
+    ignore:
+      - org-zizmor.yml
