@@ -28,7 +28,7 @@
     {
       "matchPackageNames": ["@immich/**"],
       "minimumReleaseAge": "0"
-    }
+    },
     {
       "groupName": "flutter",
       "matchPackageNames": [
