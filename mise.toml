@@ -3,7 +3,7 @@ pin = true
 lockfile = true
 
 [tools]
-"npm:renovate" = "44.5.3"
+"npm:renovate" = "44.14.3"
 
 [tasks."renovate:check"]
 description = "Validate renovate config files"
