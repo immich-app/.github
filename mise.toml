@@ -3,7 +3,7 @@ pin = true
 lockfile = true
 
 [tools]
-"npm:renovate" = "44.38.0"
+"npm:renovate" = { version = "44.38.0", trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"] }
 
 [tasks."renovate:check"]
 description = "Validate renovate config files"
