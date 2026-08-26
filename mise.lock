@@ -3,3 +3,6 @@
 [[tools."npm:renovate"]]
 version = "44.38.0"
 backend = "npm:renovate"
+
+[tools."npm:renovate".options]
+trust_policy_excludes = '["@yarnpkg/libzip@3.2.2"]'
