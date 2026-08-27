@@ -14,12 +14,6 @@
   "prConcurrentLimit": 0,
   "labels": ["dependencies", "renovate", "changelog:skip"],
   "postUpdateOptions": ["pnpmDedupe"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 9am on the 1st day of the month"],
-    "commitMessageExtra": "({{manager}})",
-    "additionalBranchPrefix": "{{manager}}-"
-  },
   "packageRules": [
     {
       "groupName": "@immich/ui",
