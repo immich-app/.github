@@ -144,6 +144,79 @@
       "matchUpdateTypes": ["minor"],
       "matchCurrentVersion": "/^v?0\\./",
       "additionalBranchPrefix": "major-"
+    },
+    {
+      "description": "Always chore, so dependency bumps never trigger release-please releases",
+      "matchPackageNames": ["*"],
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "commitMessageExtra": "({{currentDigestShort}} → {{newDigestShort}})"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "semanticCommitScope": "container",
+      "commitMessageTopic": "image {{depName}}"
+    },
+    {
+      "matchDatasources": ["helm"],
+      "semanticCommitScope": "helm",
+      "commitMessageTopic": "chart {{depName}}"
+    },
+    {
+      "matchManagers": ["gomod"],
+      "semanticCommitScope": "go",
+      "commitMessageTopic": "module {{depName}}"
+    },
+    {
+      "matchManagers": ["cargo"],
+      "semanticCommitScope": "rust",
+      "commitMessageTopic": "crate {{depName}}"
+    },
+    {
+      "matchManagers": ["npm"],
+      "semanticCommitScope": "npm",
+      "commitMessageTopic": "dependency {{depName}}"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "semanticCommitScope": "github-action",
+      "commitMessageTopic": "action {{depName}}"
+    },
+    {
+      "matchDatasources": ["github-releases"],
+      "semanticCommitScope": "github-release",
+      "commitMessageTopic": "release {{depName}}"
+    },
+    {
+      "matchManagers": ["mise"],
+      "semanticCommitScope": "mise",
+      "commitMessageTopic": "tool {{depName}}"
+    },
+    {
+      "matchDatasources": ["terraform-provider"],
+      "semanticCommitScope": "terraform",
+      "commitMessageTopic": "provider {{depName}}"
+    },
+    {
+      "matchDatasources": ["terraform-module"],
+      "semanticCommitScope": "terraform",
+      "commitMessageTopic": "module {{depName}}"
+    },
+    {
+      "matchDatasources": ["galaxy-collection"],
+      "semanticCommitScope": "ansible",
+      "commitMessageTopic": "collection {{depName}}"
+    },
+    {
+      "matchDatasources": ["galaxy"],
+      "semanticCommitScope": "ansible",
+      "commitMessageTopic": "role {{depName}}"
     }
   ],
   "customManagers": [
