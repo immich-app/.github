@@ -15,6 +15,20 @@
   "prHourlyLimit": 0,
   "labels": ["dependencies", "renovate", "changelog:skip"],
   "postUpdateOptions": ["pnpmDedupe"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**",
+    "**/.mise/locks/**"
+  ],
+  "registryAliases": {
+    "mirror.gcr.io": "docker.io"
+  },
   "packageRules": [
     {
       "groupName": "@immich/ui",
@@ -138,7 +152,7 @@
       "description": "Process custom dependencies",
       "managerFilePatterns": ["/.*/"],
       "matchStrings": [
-        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>\\S+))?\\s*\\n(?:.*?[:=]|\\s*-)\\s*\"?(?<currentValue>[^\"\\s]+)\"?"
+        "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)(?: versioning=(?<versioning>\\S+))?\\s*\\n(?:.*?[:=]|\\s*-)\\s*(?:&\\S+\\s+)?[\"']?(?<currentValue>[^\"'\\s]+)[\"']?"
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
