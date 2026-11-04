@@ -20,4 +20,5 @@ The following are out of scope:
 ## LLM-assisted reports
 
 If you use an LLM to help find or describe an issue, you must confirm the behaviour yourself and include a tested step-by-step reproduction against a fresh Immich instance.  
+The report must be brief and quick to read and understand. If it isn't, it may be closed without further analysis.
 Do not mass-submit LLM generated security reports. If you do, you may be banned from the project.
